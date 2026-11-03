@@ -47,8 +47,6 @@ th { font-weight: bold; } td:first-child { font-weight: bold; white-space: nowra
 .profile-title.light { background: #f1f1f1; color: var(--ink); }
 .profile-body { padding: 8px 0; } .profile-body h3 { font-size: 30px; }
 .sources { font-size: 13px; color: var(--muted); }
-footer { border-top: 1px solid var(--line); margin-top: 32px; }
-.footer-inner { display: flex; justify-content: space-between; gap: 24px; padding: 28px 0; font-size: 12px; color: var(--muted); }
 .skip { position: relative;  background: white; text-decoration: none;  border: 2px solid #171717; } .skip:focus { top: 8px; }
 .profile-title.img1 {
     background-image: url("magnus.png");
@@ -74,5 +72,23 @@ footer { border-top: 1px solid var(--line); margin-top: 32px; }
     border-color: var(--ink);
 }
 
+footer { 
+    border-top: 1px solid #171717; 
+    margin-top: 32px;
+}
+.footer-inner { 
+
+    padding: 28px 0; 
+    font-size: 12px; 
+}
+
+.board {
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.board:hover {
+    transform: rotate(180deg);
+}
 
 @media (max-width: 760px) { .wrap { width: calc(100% - 40px); } .header-inner { min-height: 110px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 4px; padding: 18px 0; } .logo span { display: none; } nav { gap: 24px; } .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 0; } .hero figure { max-width: 480px; width: 100%; } .explore { grid-template-columns: 1fr; gap: 40px; padding-bottom: 40px; } .intro-line { flex-direction: column; gap: 12px; } .page-title { padding: 48px 0 32px; } .reading-section, .profile { grid-template-columns: 1fr; gap: 20px; padding: 32px 0; } .profile-title { min-height: 220px; } .footer-inner { flex-direction: column; gap: 6px; } }
